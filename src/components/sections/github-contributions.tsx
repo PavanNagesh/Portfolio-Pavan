@@ -96,7 +96,7 @@ function ScaledContributionCalendar({
                 "oklch(0.62 0.2 275)",
               ],
               light: [
-                "oklch(0.97 0 0)",
+                "oklch(0.955 0.006 275)",
                 "oklch(0.88 0.04 275)",
                 "oklch(0.72 0.1 275)",
                 "oklch(0.58 0.16 275)",
@@ -129,7 +129,7 @@ export function GithubContributionsContent() {
         <motion.div
           whileHover={{ y: -2 }}
           transition={transition.base}
-          className="premium-border overflow-hidden rounded-2xl border border-border/50 bg-card/60 p-5 shadow-sm transition-shadow hover:border-brand/25 hover:shadow-lg hover:shadow-brand/5 md:p-6"
+          className="premium-border overflow-hidden rounded-2xl border border-border/50 bg-card/80 p-5 shadow-[var(--card-elevation)] transition-shadow hover:border-brand/25 hover:shadow-[var(--card-elevation-hover)] md:p-6"
         >
           <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-3">

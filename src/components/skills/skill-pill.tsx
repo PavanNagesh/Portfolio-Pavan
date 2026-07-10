@@ -21,12 +21,12 @@ export function SkillPill({ skill }: SkillPillProps) {
           transition={transition.fast}
           className={cn(
             "inline-flex cursor-default items-center rounded-full px-3 py-1.5",
-            "border border-brand/20 bg-gradient-to-br from-brand/[0.08] to-white/[0.03]",
+            "border border-brand/20 bg-gradient-to-br from-brand/[0.08] to-brand/[0.03]",
             "text-[12px] font-medium text-foreground/90",
-            "shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]",
+            "shadow-[var(--pill-inset)]",
             "transition-all duration-300",
             "hover:border-brand/45 hover:from-brand/15 hover:text-brand",
-            "hover:shadow-[0_0_16px_oklch(0.52_0.22_275/0.18),inset_0_1px_0_0_rgba(255,255,255,0.08)]"
+            "hover:shadow-[var(--pill-shadow-hover)]"
           )}
         >
           {skill.name}

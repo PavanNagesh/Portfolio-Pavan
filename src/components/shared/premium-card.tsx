@@ -20,8 +20,9 @@ export function PremiumCard({
       whileHover={{ y: -4 }}
       transition={transition.base}
       className={cn(
-        "group relative rounded-2xl border border-border/50 bg-card/60 p-5 shadow-sm backdrop-blur-sm",
-        "transition-shadow duration-300 hover:border-brand/30 hover:shadow-lg hover:shadow-brand/5",
+        "group relative rounded-2xl border border-border/50 bg-card/80 p-5 backdrop-blur-sm",
+        "shadow-[var(--card-elevation)] transition-shadow duration-300",
+        "hover:border-brand/30 hover:shadow-[var(--card-elevation-hover)]",
         glow && "premium-border",
         className
       )}

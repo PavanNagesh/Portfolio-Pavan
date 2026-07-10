@@ -9,6 +9,7 @@ import {
 import { ArrowDown, FileText, FolderOpen, Mail } from "lucide-react";
 import { personalInfo } from "@/data/personal";
 import { MagneticButton } from "@/components/shared/magnetic-button";
+import { useTheme } from "@/components/shared/theme-provider";
 import { DotPattern } from "@/components/ui/dot-pattern";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
 import { SparklesCore } from "@/components/ui/sparkles";
@@ -16,6 +17,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { transition } from "@/constants/motion";
 
 export function HeroSection() {
+  const { theme } = useTheme();
   const sectionRef = useRef<HTMLElement>(null);
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -61,7 +63,7 @@ export function HeroSection() {
           width={20}
           height={20}
           cr={0.8}
-          className="opacity-30 text-brand/25 [mask-image:radial-gradient(ellipse_at_center,white,transparent_75%)]"
+          className="opacity-30 text-brand/20 dark:text-brand/25 [mask-image:radial-gradient(ellipse_at_center,white,transparent_75%)]"
         />
 
         <SparklesCore
@@ -71,7 +73,7 @@ export function HeroSection() {
           maxSize={1.2}
           particleDensity={100}
           className="h-full w-full"
-          particleColor="#FFFFFF"
+          particleColor={theme === "dark" ? "#FFFFFF" : "#7C5CFC"}
           speed={0.8}
         />
 
@@ -83,7 +85,9 @@ export function HeroSection() {
             translateX: "-50%",
             translateY: "-50%",
             background:
-              "radial-gradient(circle, oklch(0.62 0.2 275 / 0.25) 0%, transparent 70%)",
+              theme === "dark"
+                ? "radial-gradient(circle, oklch(0.62 0.2 275 / 0.25) 0%, transparent 70%)"
+                : "radial-gradient(circle, oklch(0.52 0.22 275 / 0.18) 0%, transparent 70%)",
           }}
         />
 
@@ -120,7 +124,7 @@ export function HeroSection() {
               <motion.div
                 animate={{ scale: [1, 1.04, 1], opacity: [0.85, 1, 0.85] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="h-full w-full rounded-full bg-[radial-gradient(circle_at_30%_30%,oklch(0.62_0.2_275/0.35),oklch(0.52_0.22_275/0.12)_55%,transparent_72%)] ring-1 ring-brand/20"
+              className="h-full w-full rounded-full bg-[radial-gradient(circle_at_30%_30%,oklch(0.62_0.2_275/0.35),oklch(0.52_0.22_275/0.12)_55%,transparent_72%)] ring-1 ring-brand/25 dark:ring-brand/20"
               />
               <motion.div
                 animate={{ rotate: 360 }}
@@ -159,7 +163,7 @@ export function HeroSection() {
 
           <MagneticButton>
             <ShimmerButton
-              className="h-11 gap-2 rounded-full px-6 text-sm font-medium shadow-md shadow-brand/20"
+              className="h-11 gap-2 rounded-full px-6 text-sm font-medium text-white shadow-md shadow-brand/20"
               background="oklch(0.52 0.22 275)"
               shimmerColor="oklch(0.85 0.1 275)"
               borderRadius="9999px"
@@ -187,8 +191,8 @@ export function HeroSection() {
             <div className="mt-6 flex items-center justify-center gap-2 sm:gap-3">
             <MagneticButton>
               <ShimmerButton
-                className="h-11 gap-2 rounded-full px-5 text-sm font-medium text-foreground"
-                background="oklch(0.15 0.014 260 / 0.6)"
+                className="h-11 gap-2 rounded-full px-5 text-sm font-medium text-foreground shadow-sm"
+                background="var(--shimmer-secondary-bg)"
                 shimmerColor="oklch(0.62 0.2 275 / 0.5)"
                 borderRadius="9999px"
                 onClick={() => scrollTo("#projects")}

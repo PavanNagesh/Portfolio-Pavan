@@ -52,17 +52,13 @@ export function SkillCategoryCard({
       whileHover={{ y: -3 }}
       className={cn(
         "group relative overflow-hidden rounded-2xl p-[1px]",
-        "bg-gradient-to-br from-brand/25 via-white/[0.06] to-brand/10",
+        "card-gradient-ring",
         className
       )}
     >
       <div
         className={cn(
-          "relative h-full rounded-[15px] p-4 sm:p-5",
-          "border border-white/[0.06] bg-white/[0.025] backdrop-blur-xl",
-          "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05),0_8px_32px_rgba(0,0,0,0.18)]",
-          "transition-shadow duration-300",
-          "group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.08),0_12px_40px_oklch(0.52_0.22_275/0.1)]"
+          "glass-card relative h-full rounded-[15px] p-4 sm:p-5"
         )}
       >
         <div
@@ -75,7 +71,7 @@ export function SkillCategoryCard({
             className={cn(
               "flex h-9 w-9 shrink-0 items-center justify-center rounded-xl",
               "border border-brand/20 bg-brand/10 text-brand",
-              "shadow-[0_0_20px_oklch(0.52_0.22_275/0.12)]"
+              "shadow-[0_2px_8px_oklch(0.52_0.22_275/0.1)] dark:shadow-[0_0_20px_oklch(0.52_0.22_275/0.12)]"
             )}
           >
             <Icon className="h-4 w-4" />

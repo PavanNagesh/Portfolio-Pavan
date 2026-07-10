@@ -42,7 +42,7 @@ export function AchievementsSection() {
         <div className="mt-5 flex flex-wrap items-center justify-center gap-3">
           <MagneticButton>
             <ShimmerButton
-              className="h-11 gap-2 rounded-full px-6 text-sm font-medium shadow-md shadow-brand/20"
+              className="h-11 gap-2 rounded-full px-6 text-sm font-medium text-white shadow-md shadow-brand/20"
               background="oklch(0.52 0.22 275)"
               shimmerColor="oklch(0.85 0.1 275)"
               borderRadius="9999px"
@@ -54,8 +54,8 @@ export function AchievementsSection() {
           </MagneticButton>
           <MagneticButton>
             <ShimmerButton
-              className="h-11 gap-2 rounded-full px-6 text-sm font-medium text-foreground"
-              background="oklch(0.15 0.014 260 / 0.6)"
+              className="h-11 gap-2 rounded-full px-6 text-sm font-medium text-foreground shadow-sm"
+              background="var(--shimmer-secondary-bg)"
               shimmerColor="oklch(0.62 0.2 275 / 0.5)"
               borderRadius="9999px"
               onClick={() => window.open(personalInfo.github, "_blank")}

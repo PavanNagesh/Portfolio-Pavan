@@ -39,7 +39,7 @@ export function TechStackSection() {
       />
 
       <FadeIn>
-        <div className="relative mb-10 overflow-hidden rounded-2xl border border-border/40 bg-card/30 py-3">
+        <div className="relative mb-10 overflow-hidden rounded-2xl border border-border/40 bg-card/50 py-3 shadow-[var(--card-elevation)]">
           <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-card/80 to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-card/80 to-transparent" />
           <Marquee pauseOnHover className="[--duration:45s] [--gap:2rem]">
@@ -63,7 +63,7 @@ export function TechStackSection() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={transition.base}
-                className="group premium-border h-full rounded-2xl border border-border/50 bg-card/50 p-6 shadow-sm transition-shadow hover:border-brand/25 hover:shadow-lg hover:shadow-brand/5"
+                className="group premium-border h-full rounded-2xl border border-border/50 bg-card/80 p-6 shadow-[var(--card-elevation)] transition-shadow hover:border-brand/25 hover:shadow-[var(--card-elevation-hover)]"
               >
                 <motion.div
                   whileHover={{ rotate: 6 }}

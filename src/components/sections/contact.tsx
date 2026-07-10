@@ -34,7 +34,7 @@ export function ContactSection() {
   return (
     <SectionWrapper id="contact" variant="glow">
       <FadeIn>
-        <div className="premium-border relative overflow-hidden rounded-3xl border border-brand/20 bg-card/70 p-6 md:p-10">
+        <div className="premium-border relative overflow-hidden rounded-3xl border border-brand/20 bg-card/85 p-6 shadow-[var(--card-elevation)] md:p-10">
           <DotPattern
             width={18}
             height={18}
@@ -56,7 +56,7 @@ export function ContactSection() {
                   key={link.label}
                   whileHover={{ y: -3 }}
                   transition={transition.base}
-                  className="group premium-border rounded-2xl border border-border/50 bg-background/40 p-5 transition-colors hover:border-brand/30"
+                  className="group premium-border rounded-2xl border border-border/50 bg-card/70 p-5 shadow-[var(--card-elevation)] transition-all hover:border-brand/30 hover:shadow-[var(--card-elevation-hover)]"
                 >
                   <a
                     href={link.href}
@@ -84,7 +84,7 @@ export function ContactSection() {
             <div className="mt-8 flex flex-wrap gap-3">
               <MagneticButton>
                 <ShimmerButton
-                  className="h-12 gap-2 rounded-full px-7 text-sm font-medium shadow-md shadow-brand/20"
+                  className="h-12 gap-2 rounded-full px-7 text-sm font-medium text-white shadow-md shadow-brand/20"
                   background="oklch(0.52 0.22 275)"
                   shimmerColor="oklch(0.85 0.1 275)"
                   borderRadius="9999px"
@@ -97,8 +97,8 @@ export function ContactSection() {
               </MagneticButton>
               <MagneticButton>
                 <ShimmerButton
-                  className="h-12 gap-2 rounded-full px-7 text-sm font-medium"
-                  background="oklch(0.15 0.014 260 / 0.6)"
+                  className="h-12 gap-2 rounded-full px-7 text-sm font-medium text-foreground shadow-sm"
+                  background="var(--shimmer-secondary-bg)"
                   shimmerColor="oklch(0.62 0.2 275 / 0.5)"
                   borderRadius="9999px"
                   onClick={() => window.open(personalInfo.resumePath, "_blank")}

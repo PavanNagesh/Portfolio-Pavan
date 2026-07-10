@@ -22,7 +22,7 @@ export function AboutSection() {
 
       <div className="grid gap-8 lg:grid-cols-[300px_1fr] lg:gap-12">
         <FadeIn direction="left">
-          <div className="premium-border relative mx-auto h-72 w-72 overflow-hidden rounded-2xl border border-border/50 bg-card/30 lg:mx-0 lg:h-80 lg:w-80">
+          <div className="premium-border relative mx-auto h-72 w-72 overflow-hidden rounded-2xl border border-border/60 bg-card/80 shadow-[var(--card-elevation)] lg:mx-0 lg:h-80 lg:w-80">
             <img
               src={personalInfo.photoPath}
               alt={personalInfo.name}

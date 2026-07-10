@@ -21,7 +21,7 @@ export function SectionWrapper({
       className={cn(
         compact ? "section-padding-compact" : "section-padding",
         "relative",
-        variant === "alt" && "bg-card/20",
+        variant === "alt" && "bg-[var(--section-alt-bg)]",
         variant === "glow" && "section-glow",
         className
       )}

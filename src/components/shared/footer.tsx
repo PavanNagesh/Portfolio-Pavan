@@ -65,7 +65,7 @@ export function Footer() {
                   aria-label={label}
                   whileHover={{ scale: 1.08, y: -2 }}
                   transition={transition.fast}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border border-border/50 bg-card/50 text-muted-foreground transition-colors hover:border-brand/40 hover:text-brand"
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-border/50 bg-card/80 text-muted-foreground shadow-sm transition-colors hover:border-brand/40 hover:text-brand hover:shadow-[var(--card-elevation-hover)]"
                 >
                   <Icon className="h-4 w-4" />
                 </motion.a>

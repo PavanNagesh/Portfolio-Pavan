@@ -69,34 +69,34 @@ const ACCENT_STYLES: Record<
   hackathon: {
     ring: "from-amber-500/30 via-amber-400/10 to-brand/10",
     category:
-      "border-amber-400/30 bg-gradient-to-r from-amber-500/15 to-amber-400/5 text-amber-100/90",
-    icon: "border-amber-400/25 bg-amber-500/10 text-amber-200 shadow-[0_0_24px_oklch(0.75_0.15_85/0.15)]",
+      "border-amber-400/30 bg-gradient-to-r from-amber-500/15 to-amber-400/5 text-amber-800 dark:text-amber-100/90",
+    icon: "border-amber-400/25 bg-amber-500/10 text-amber-600 dark:text-amber-200 shadow-[0_2px_8px_oklch(0.75_0.15_85/0.12)] dark:shadow-[0_0_24px_oklch(0.75_0.15_85/0.15)]",
     hover:
-      "hover:border-amber-400/30 hover:shadow-[0_12px_40px_oklch(0.75_0.15_85/0.08)]",
+      "hover:border-amber-400/35 hover:shadow-[0_8px_24px_oklch(0.75_0.15_85/0.1)] dark:hover:shadow-[0_12px_40px_oklch(0.75_0.15_85/0.08)]",
   },
   production: {
     ring: "from-sky-500/30 via-sky-400/10 to-brand/10",
     category:
-      "border-sky-400/30 bg-gradient-to-r from-sky-500/15 to-sky-400/5 text-sky-100/90",
-    icon: "border-sky-400/25 bg-sky-500/10 text-sky-200 shadow-[0_0_24px_oklch(0.62_0.16_240/0.15)]",
+      "border-sky-400/30 bg-gradient-to-r from-sky-500/15 to-sky-400/5 text-sky-800 dark:text-sky-100/90",
+    icon: "border-sky-400/25 bg-sky-500/10 text-sky-600 dark:text-sky-200 shadow-[0_2px_8px_oklch(0.62_0.16_240/0.12)] dark:shadow-[0_0_24px_oklch(0.62_0.16_240/0.15)]",
     hover:
-      "hover:border-sky-400/30 hover:shadow-[0_12px_40px_oklch(0.62_0.16_240/0.08)]",
+      "hover:border-sky-400/35 hover:shadow-[0_8px_24px_oklch(0.62_0.16_240/0.1)] dark:hover:shadow-[0_12px_40px_oklch(0.62_0.16_240/0.08)]",
   },
   internship: {
     ring: "from-violet-500/30 via-violet-400/10 to-brand/10",
     category:
-      "border-violet-400/30 bg-gradient-to-r from-violet-500/15 to-violet-400/5 text-violet-100/90",
-    icon: "border-violet-400/25 bg-violet-500/10 text-violet-200 shadow-[0_0_24px_oklch(0.52_0.22_275/0.15)]",
+      "border-violet-400/30 bg-gradient-to-r from-violet-500/15 to-violet-400/5 text-violet-800 dark:text-violet-100/90",
+    icon: "border-violet-400/25 bg-violet-500/10 text-violet-600 dark:text-violet-200 shadow-[0_2px_8px_oklch(0.52_0.22_275/0.12)] dark:shadow-[0_0_24px_oklch(0.52_0.22_275/0.15)]",
     hover:
-      "hover:border-violet-400/30 hover:shadow-[0_12px_40px_oklch(0.52_0.22_275/0.08)]",
+      "hover:border-violet-400/35 hover:shadow-[0_8px_24px_oklch(0.52_0.22_275/0.1)] dark:hover:shadow-[0_12px_40px_oklch(0.52_0.22_275/0.08)]",
   },
   research: {
     ring: "from-emerald-500/30 via-emerald-400/10 to-brand/10",
     category:
-      "border-emerald-400/30 bg-gradient-to-r from-emerald-500/15 to-emerald-400/5 text-emerald-100/90",
-    icon: "border-emerald-400/25 bg-emerald-500/10 text-emerald-200 shadow-[0_0_24px_oklch(0.62_0.16_160/0.15)]",
+      "border-emerald-400/30 bg-gradient-to-r from-emerald-500/15 to-emerald-400/5 text-emerald-800 dark:text-emerald-100/90",
+    icon: "border-emerald-400/25 bg-emerald-500/10 text-emerald-600 dark:text-emerald-200 shadow-[0_2px_8px_oklch(0.62_0.16_160/0.12)] dark:shadow-[0_0_24px_oklch(0.62_0.16_160/0.15)]",
     hover:
-      "hover:border-emerald-400/30 hover:shadow-[0_12px_40px_oklch(0.62_0.16_160/0.08)]",
+      "hover:border-emerald-400/35 hover:shadow-[0_8px_24px_oklch(0.62_0.16_160/0.1)] dark:hover:shadow-[0_12px_40px_oklch(0.62_0.16_160/0.08)]",
   },
 };
 
@@ -163,9 +163,7 @@ export function MilestoneCard({ achievement, index }: MilestoneCardProps) {
     >
       <div
         className={cn(
-          "relative flex h-full min-h-[280px] flex-col rounded-[15px] border border-white/[0.07]",
-          "bg-white/[0.025] p-5 backdrop-blur-xl md:p-6",
-          "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05),0_8px_32px_rgba(0,0,0,0.18)]",
+          "glass-card relative flex h-full min-h-[280px] flex-col rounded-[15px] p-5 md:p-6",
           "transition-all duration-300",
           accent.hover
         )}
@@ -198,7 +196,7 @@ export function MilestoneCard({ achievement, index }: MilestoneCardProps) {
           <h3 className="flex-1 text-lg font-semibold leading-snug tracking-tight text-foreground md:text-xl">
             {achievement.title}
           </h3>
-          <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
+          <span className="glass-pill rounded-full px-2 py-0.5 text-[10px] font-medium text-muted-foreground">
             {achievement.year}
           </span>
         </div>
@@ -216,10 +214,9 @@ export function MilestoneCard({ achievement, index }: MilestoneCardProps) {
               whileHover={{ scale: 1.05, y: -1 }}
               transition={transition.fast}
               className={cn(
-                "inline-flex items-center gap-1 rounded-lg border border-white/10",
-                "bg-white/[0.03] px-2 py-1 text-[11px] font-medium text-foreground/85",
-                "shadow-[0_0_12px_oklch(0.52_0.22_275/0.06)]",
-                "transition-shadow duration-300 hover:border-brand/30 hover:shadow-[0_0_16px_oklch(0.52_0.22_275/0.14)]"
+                "glass-pill inline-flex items-center gap-1 rounded-lg px-2 py-1 text-[11px] font-medium text-foreground/85",
+                "shadow-[0_1px_3px_oklch(0.22_0.02_260/0.05)] dark:shadow-[0_0_12px_oklch(0.52_0.22_275/0.06)]",
+                "transition-shadow duration-300 hover:border-brand/30 hover:shadow-[0_2px_8px_oklch(0.52_0.22_275/0.12)] dark:hover:shadow-[0_0_16px_oklch(0.52_0.22_275/0.14)]"
               )}
             >
               <span className="text-[10px]" aria-hidden>

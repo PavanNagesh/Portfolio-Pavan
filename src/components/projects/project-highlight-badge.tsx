@@ -109,21 +109,21 @@ function inferVariant(label: string): ProjectHighlightVariant {
 
 const VARIANT_STYLES: Record<ProjectHighlightVariant, string> = {
   research:
-    "from-amber-500/20 via-amber-400/5 to-brand/10 border-amber-400/35 text-amber-100/90",
+    "from-amber-500/20 via-amber-400/5 to-brand/10 border-amber-400/35 text-amber-800 dark:text-amber-100/90",
   award:
-    "from-yellow-500/20 via-amber-400/5 to-orange-500/10 border-amber-400/40 text-amber-50/90",
+    "from-yellow-500/20 via-amber-400/5 to-orange-500/10 border-amber-400/40 text-amber-900 dark:text-amber-50/90",
   cloud:
-    "from-sky-500/15 via-brand/5 to-cyan-500/10 border-sky-400/30 text-sky-100/90",
-  ai: "from-violet-500/20 via-brand/10 to-fuchsia-500/10 border-violet-400/35 text-violet-100/90",
+    "from-sky-500/15 via-brand/5 to-cyan-500/10 border-sky-400/30 text-sky-800 dark:text-sky-100/90",
+  ai: "from-violet-500/20 via-brand/10 to-fuchsia-500/10 border-violet-400/35 text-violet-800 dark:text-violet-100/90",
   blockchain:
-    "from-indigo-500/15 via-brand/10 to-purple-500/10 border-indigo-400/30 text-indigo-100/90",
+    "from-indigo-500/15 via-brand/10 to-purple-500/10 border-indigo-400/30 text-indigo-800 dark:text-indigo-100/90",
   data:
-    "from-emerald-500/15 via-brand/5 to-teal-500/10 border-emerald-400/30 text-emerald-100/90",
+    "from-emerald-500/15 via-brand/5 to-teal-500/10 border-emerald-400/30 text-emerald-800 dark:text-emerald-100/90",
   network:
-    "from-blue-500/15 via-brand/5 to-sky-500/10 border-blue-400/30 text-blue-100/90",
-  iot: "from-cyan-500/15 via-brand/5 to-teal-500/10 border-cyan-400/30 text-cyan-100/90",
+    "from-blue-500/15 via-brand/5 to-sky-500/10 border-blue-400/30 text-blue-800 dark:text-blue-100/90",
+  iot: "from-cyan-500/15 via-brand/5 to-teal-500/10 border-cyan-400/30 text-cyan-800 dark:text-cyan-100/90",
   default:
-    "from-brand/15 via-white/[0.04] to-brand/5 border-brand/25 text-foreground/90",
+    "from-brand/15 via-brand/5 to-brand/5 border-brand/25 text-foreground/90",
 };
 
 interface ProjectHighlightBadgeProps {
@@ -144,12 +144,12 @@ export function ProjectHighlightBadge({
       transition={{ type: "spring", stiffness: 500, damping: 28 }}
       className={cn(
         "inline-flex items-center gap-1 rounded-full border bg-gradient-to-br",
-        "shadow-[0_0_12px_oklch(0.52_0.22_275/0.08)]",
-        "transition-shadow duration-300 hover:shadow-[0_0_18px_oklch(0.52_0.22_275/0.18)]",
+        "shadow-[0_1px_3px_oklch(0.22_0.02_260/0.06)] dark:shadow-[0_0_12px_oklch(0.52_0.22_275/0.08)]",
+        "transition-shadow duration-300 hover:shadow-[0_2px_8px_oklch(0.52_0.22_275/0.12)] dark:hover:shadow-[0_0_18px_oklch(0.52_0.22_275/0.18)]",
         VARIANT_STYLES[variant],
         compact ? "px-2 py-0.5 text-[10px]" : "px-2.5 py-1 text-[11px]",
         highlight.emphasized &&
-          "ring-1 ring-brand/40 shadow-[0_0_20px_oklch(0.52_0.22_275/0.22)] font-semibold"
+          "ring-1 ring-brand/40 shadow-[0_2px_10px_oklch(0.52_0.22_275/0.14)] dark:shadow-[0_0_20px_oklch(0.52_0.22_275/0.22)] font-semibold"
       )}
     >
       <span className="text-[10px] leading-none" aria-hidden>
@@ -196,8 +196,7 @@ export function ProjectHighlights({
         {overflow > 0 && (
           <span
             className={cn(
-              "inline-flex items-center rounded-full border border-white/10",
-              "bg-white/[0.04] font-medium text-muted-foreground",
+              "glass-pill inline-flex items-center rounded-full font-medium text-muted-foreground",
               compact ? "px-2 py-0.5 text-[10px]" : "px-2.5 py-1 text-[11px]"
             )}
           >

@@ -69,10 +69,7 @@ function ProjectExternalLinks({
                 rel="noopener noreferrer"
                 onClick={onLinkClick}
                 className={cn(
-                  "flex h-8 w-8 items-center justify-center rounded-md",
-                  "border border-white/10 bg-white/[0.04] text-muted-foreground",
-                  "transition-all duration-200",
-                  "hover:border-brand/50 hover:bg-brand/10 hover:text-brand hover:shadow-[0_0_12px_oklch(0.52_0.22_275/0.2)]"
+                  "glass-icon-btn flex h-8 w-8 items-center justify-center rounded-md text-muted-foreground"
                 )}
               >
                 <Icon className="h-3.5 w-3.5" />
@@ -128,11 +125,7 @@ function ProjectCard({
 
       <div
         className={cn(
-          "relative flex h-full flex-col rounded-2xl p-5 sm:p-6",
-          "border border-white/[0.08] bg-white/[0.03] backdrop-blur-xl",
-          "shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06),0_8px_32px_rgba(0,0,0,0.24)]",
-          "transition-all duration-300",
-          "group-hover:border-brand/35 group-hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.1),0_12px_40px_oklch(0.52_0.22_275/0.12)]",
+          "glass-card relative flex h-full flex-col rounded-2xl p-5 sm:p-6",
           "focus-visible:ring-2 focus-visible:ring-brand/40"
         )}
       >
@@ -183,7 +176,7 @@ function ProjectDetailModal({
   return (
     <DialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
       <DialogPrimitive.Portal>
-        <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
+        <DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-[var(--overlay)] backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0" />
         <DialogPrimitive.Content
           className={cn(
             "fixed left-1/2 top-1/2 z-50 max-h-[88vh] w-[min(640px,92vw)] -translate-x-1/2 -translate-y-1/2 overflow-y-auto rounded-xl border border-border/50 bg-card p-6 shadow-xl sm:p-8",
@@ -298,16 +291,9 @@ export function ProjectsSection() {
       className="overflow-hidden !bg-transparent"
     >
       <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,oklch(0.52_0.22_275/0.08),transparent_70%)]" />
-        <div
-          className="absolute inset-0 opacity-[0.35]"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 1px 1px, oklch(0.52 0.22 275 / 0.12) 1px, transparent 0)",
-            backgroundSize: "28px 28px",
-          }}
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,oklch(0.11_0.012_260/0.4)_100%)]" />
+        <div className="section-mesh-radial absolute inset-0" />
+        <div className="section-mesh-dots absolute inset-0" />
+        <div className="section-mesh-fade absolute inset-0" />
       </div>
 
       <SectionHeading

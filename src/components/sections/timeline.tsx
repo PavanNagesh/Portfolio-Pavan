@@ -35,7 +35,7 @@ export function TimelineSection() {
               >
                 <div
                   className={cn(
-                    "mb-4 flex h-12 w-12 items-center justify-center rounded-full border text-xs font-semibold transition-shadow group-hover:shadow-md group-hover:shadow-brand/20",
+                    "mb-4 flex h-12 w-12 items-center justify-center rounded-full border text-xs font-semibold transition-shadow group-hover:shadow-[var(--card-elevation-hover)]",
                     typeStyles[event.type]
                   )}
                 >
