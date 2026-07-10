@@ -21,7 +21,7 @@ export default function App() {
         <LoadingScreen />
         <ScrollProgressBar />
         <Navbar />
-        <main>
+        <main className="relative">
           <HomePage />
         </main>
         <Footer />

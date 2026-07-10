@@ -4,17 +4,11 @@ import { SectionHeading } from "@/components/shared/section-heading";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { PremiumCard } from "@/components/shared/premium-card";
 import { FadeIn } from "@/components/shared/fade-in";
-import { DotPattern } from "@/components/ui/dot-pattern";
 
 export function AboutSection() {
   return (
-    <SectionWrapper id="about" variant="glow">
-      <DotPattern
-        width={22}
-        height={22}
-        cr={0.6}
-        className="opacity-15 text-brand/20 [mask-image:radial-gradient(ellipse_at_left,white,transparent_70%)]"
-      />      <SectionHeading
+    <SectionWrapper id="about" variant="glow" atmosphere="light" atmosphereTint="brand">
+      <SectionHeading
         label="About"
         title="About Me"
         description="CS student. Internships, freelance work, and probably too many side projects."

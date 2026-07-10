@@ -30,7 +30,7 @@ function CredentialGrid({ items }: { items: PlaceholderItem[] }) {
 
 export function PlaceholdersSection() {
   return (
-    <SectionWrapper variant="alt">
+    <SectionWrapper variant="alt" atmosphere="light" atmosphereTint="brand">
       <div className="section-stack">
         <GithubContributionsContent />
 

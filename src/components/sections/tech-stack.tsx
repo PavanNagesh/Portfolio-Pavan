@@ -31,7 +31,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 export function TechStackSection() {
   return (
-    <SectionWrapper id="stack" variant="alt">
+    <SectionWrapper id="stack" variant="alt" atmosphere="light" atmosphereTint="cool">
       <SectionHeading
         label="Stack"
         title="Technologies I build with"

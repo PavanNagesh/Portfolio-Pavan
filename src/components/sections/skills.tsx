@@ -10,14 +10,10 @@ export function SkillsSection() {
     <SectionWrapper
       id="skills"
       variant="alt"
-      className="relative overflow-hidden !bg-transparent"
+      atmosphere="light"
+      atmosphereTint="brand"
+      className="!bg-transparent"
     >
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="section-mesh-radial-top absolute inset-0" />
-        <div className="section-mesh-dots-sm absolute inset-0" />
-        <div className="section-mesh-fade absolute inset-0" />
-      </div>
-
       <SectionHeading
         label="Skills"
         title="What I'm Good At"

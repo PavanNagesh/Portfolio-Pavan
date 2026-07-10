@@ -16,7 +16,7 @@ import {
 import { transition } from "@/constants/motion";
 export function ExperienceSection() {
   return (
-    <SectionWrapper id="experience">
+    <SectionWrapper id="experience" atmosphere="light" atmosphereTint="cool">
       <SectionHeading
         label="Experience"
         title="Where I've worked"

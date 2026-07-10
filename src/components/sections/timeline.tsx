@@ -15,7 +15,7 @@ const typeStyles = {
 
 export function TimelineSection() {
   return (
-    <SectionWrapper id="journey">
+    <SectionWrapper id="journey" atmosphere="light" atmosphereTint="neutral">
       <SectionHeading
         label="Journey"
         title="My Journey"

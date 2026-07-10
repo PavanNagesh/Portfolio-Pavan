@@ -18,8 +18,12 @@ export function Footer() {
   ];
 
   return (
-    <footer className="section-glow section-padding-compact pb-8">
-      <div className="container-max">
+    <footer className="section-glow relative overflow-hidden section-padding-compact pb-8">
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,var(--brand-muted)_0%,transparent_55%)]"
+        aria-hidden
+      />
+      <div className="container-max relative z-[1]">
         <div className="mb-8 h-px w-full bg-gradient-to-r from-transparent via-border to-transparent" />
 
         <blockquote className="mb-8 max-w-lg text-sm leading-relaxed text-muted-foreground italic md:text-base">

@@ -288,14 +288,10 @@ export function ProjectsSection() {
     <SectionWrapper
       id="projects"
       variant="alt"
-      className="overflow-hidden !bg-transparent"
+      atmosphere="light"
+      atmosphereTint="violet"
+      className="!bg-transparent"
     >
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="section-mesh-radial absolute inset-0" />
-        <div className="section-mesh-dots absolute inset-0" />
-        <div className="section-mesh-fade absolute inset-0" />
-      </div>
-
       <SectionHeading
         label="Projects"
         title="Projects I've Built"

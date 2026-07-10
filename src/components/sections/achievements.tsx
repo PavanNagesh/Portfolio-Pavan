@@ -11,7 +11,7 @@ import { transition } from "@/constants/motion";
 
 export function AchievementsSection() {
   return (
-    <SectionWrapper id="achievements" variant="glow">
+    <SectionWrapper id="achievements" variant="glow" atmosphere="light" atmosphereTint="warm">
       <SectionHeading
         label="Milestones"
         title="A few milestones"

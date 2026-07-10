@@ -9,10 +9,9 @@ import {
 import { ArrowDown, FileText, FolderOpen, Mail } from "lucide-react";
 import { personalInfo } from "@/data/personal";
 import { MagneticButton } from "@/components/shared/magnetic-button";
+import { HeroAtmosphere } from "@/components/shared/hero-atmosphere";
 import { useTheme } from "@/components/shared/theme-provider";
-import { DotPattern } from "@/components/ui/dot-pattern";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
-import { SparklesCore } from "@/components/ui/sparkles";
 import { Spotlight } from "@/components/ui/spotlight";
 import { transition } from "@/constants/motion";
 
@@ -56,49 +55,30 @@ export function HeroSection() {
       <Spotlight
         className="pointer-events-none absolute -top-24 left-0 z-0 md:-top-20 md:left-16"
         fill="oklch(0.62 0.2 275)"
+        fillOpacity={theme === "dark" ? 0.21 : 0.14}
       />
 
+      <HeroAtmosphere scrollYProgress={scrollYProgress} />
+
       <div className="pointer-events-none absolute inset-0 z-0">
-        <DotPattern
-          width={20}
-          height={20}
-          cr={0.8}
-          className="opacity-30 text-brand/20 dark:text-brand/25 [mask-image:radial-gradient(ellipse_at_center,white,transparent_75%)]"
-        />
-
-        <SparklesCore
-          id="hero-sparkles"
-          background="transparent"
-          minSize={0.3}
-          maxSize={1.2}
-          particleDensity={100}
-          className="h-full w-full"
-          particleColor={theme === "dark" ? "#FFFFFF" : "#7C5CFC"}
-          speed={0.8}
-        />
-
         <motion.div
-          className="absolute h-72 w-72 rounded-full opacity-40 blur-3xl"
+          className="absolute h-80 w-80 rounded-full blur-3xl will-change-transform dark:opacity-40"
           style={{
             x: glowX,
             y: glowY,
             translateX: "-50%",
             translateY: "-50%",
             background:
-              theme === "dark"
-                ? "radial-gradient(circle, oklch(0.62 0.2 275 / 0.25) 0%, transparent 70%)"
-                : "radial-gradient(circle, oklch(0.52 0.22 275 / 0.18) 0%, transparent 70%)",
+              "radial-gradient(circle, oklch(0.52 0.22 275 / 0.22) 0%, oklch(0.62 0.16 240 / 0.08) 45%, transparent 70%)",
+            opacity: 0.55,
           }}
         />
-
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--background)_88%)]" />
       </div>
 
       <motion.div
         style={{ opacity: contentOpacity }}
         className="container-max relative z-10 mx-auto grid min-h-[calc(100vh-9rem)] grid-cols-1 items-center gap-8 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:gap-10 xl:gap-14"
       >
-        {/* Left — role + copy */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -114,9 +94,8 @@ export function HeroSection() {
           </p>
         </motion.div>
 
-        {/* Center — orb, portrait, resume */}
         <div className="relative order-1 flex flex-col items-center gap-4 lg:order-2">
-          <div className="relative h-[min(72vw,300px)] w-[min(72vw,300px)] overflow-hidden rounded-full md:h-[380px] md:w-[380px] lg:h-[440px] lg:w-[440px]">
+          <div className="ambient-bloom relative h-[min(72vw,300px)] w-[min(72vw,300px)] overflow-hidden rounded-full md:h-[380px] md:w-[380px] lg:h-[440px] lg:w-[440px]">
             <motion.div
               style={{ scale: orbScale }}
               className="pointer-events-none absolute inset-0 z-0"
@@ -124,14 +103,14 @@ export function HeroSection() {
               <motion.div
                 animate={{ scale: [1, 1.04, 1], opacity: [0.85, 1, 0.85] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-              className="h-full w-full rounded-full bg-[radial-gradient(circle_at_30%_30%,oklch(0.62_0.2_275/0.35),oklch(0.52_0.22_275/0.12)_55%,transparent_72%)] ring-1 ring-brand/25 dark:ring-brand/20"
+                className="h-full w-full rounded-full bg-[radial-gradient(circle_at_30%_30%,oklch(0.62_0.2_275/0.35),oklch(0.52_0.22_275/0.14)_55%,transparent_72%)] ring-1 ring-brand/30 dark:ring-brand/20"
               />
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 48, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-4 rounded-full bg-[conic-gradient(from_180deg,oklch(0.62_0.2_275/0.18),transparent_35%,oklch(0.62_0.2_275/0.1)_70%,transparent)] blur-2xl"
+                className="absolute inset-4 rounded-full bg-[conic-gradient(from_180deg,oklch(0.62_0.2_275/0.2),transparent_35%,oklch(0.62_0.16_240/0.12)_70%,transparent)] blur-2xl"
               />
-              <div className="absolute inset-8 rounded-full bg-brand/10 blur-3xl" />
+              <div className="absolute inset-8 rounded-full bg-brand/12 blur-3xl dark:bg-brand/10" />
             </motion.div>
 
             <motion.div
@@ -163,7 +142,7 @@ export function HeroSection() {
 
           <MagneticButton>
             <ShimmerButton
-              className="h-11 gap-2 rounded-full px-6 text-sm font-medium text-white shadow-md shadow-brand/20"
+              className="h-11 gap-2 rounded-full px-6 text-sm font-medium text-white shadow-md shadow-brand/25"
               background="oklch(0.52 0.22 275)"
               shimmerColor="oklch(0.85 0.1 275)"
               borderRadius="9999px"
@@ -175,7 +154,6 @@ export function HeroSection() {
           </MagneticButton>
         </div>
 
-        {/* Right — name + actions */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -189,30 +167,30 @@ export function HeroSection() {
             </h1>
 
             <div className="mt-6 flex items-center justify-center gap-2 sm:gap-3">
-            <MagneticButton>
-              <ShimmerButton
-                className="h-11 gap-2 rounded-full px-5 text-sm font-medium text-foreground shadow-sm"
-                background="var(--shimmer-secondary-bg)"
-                shimmerColor="oklch(0.62 0.2 275 / 0.5)"
-                borderRadius="9999px"
-                onClick={() => scrollTo("#projects")}
-              >
-                <FolderOpen className="h-4 w-4" />
-                Projects
-              </ShimmerButton>
-            </MagneticButton>
-            <MagneticButton>
-              <ShimmerButton
-                className="h-11 gap-2 rounded-full px-5 text-sm font-medium text-muted-foreground hover:text-foreground"
-                background="transparent"
-                shimmerColor="oklch(0.62 0.2 275 / 0.35)"
-                borderRadius="9999px"
-                onClick={() => scrollTo("#contact")}
-              >
-                <Mail className="h-4 w-4" />
-                Contact
-              </ShimmerButton>
-            </MagneticButton>
+              <MagneticButton>
+                <ShimmerButton
+                  className="h-11 gap-2 rounded-full px-5 text-sm font-medium text-foreground shadow-sm"
+                  background="var(--shimmer-secondary-bg)"
+                  shimmerColor="oklch(0.62 0.2 275 / 0.5)"
+                  borderRadius="9999px"
+                  onClick={() => scrollTo("#projects")}
+                >
+                  <FolderOpen className="h-4 w-4" />
+                  Projects
+                </ShimmerButton>
+              </MagneticButton>
+              <MagneticButton>
+                <ShimmerButton
+                  className="h-11 gap-2 rounded-full px-5 text-sm font-medium text-muted-foreground hover:text-foreground"
+                  background="transparent"
+                  shimmerColor="oklch(0.62 0.2 275 / 0.35)"
+                  borderRadius="9999px"
+                  onClick={() => scrollTo("#contact")}
+                >
+                  <Mail className="h-4 w-4" />
+                  Contact
+                </ShimmerButton>
+              </MagneticButton>
             </div>
           </div>
         </motion.div>

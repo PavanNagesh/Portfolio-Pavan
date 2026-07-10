@@ -32,14 +32,14 @@ const contactLinks = [
 
 export function ContactSection() {
   return (
-    <SectionWrapper id="contact" variant="glow">
+    <SectionWrapper id="contact" variant="glow" atmosphere="light" atmosphereTint="violet">
       <FadeIn>
-        <div className="premium-border relative overflow-hidden rounded-3xl border border-brand/20 bg-card/85 p-6 shadow-[var(--card-elevation)] md:p-10">
+        <div className="premium-border relative overflow-hidden rounded-3xl border border-brand/25 bg-card/75 p-6 shadow-[var(--glass-shadow)] backdrop-blur-sm md:p-10">
           <DotPattern
             width={18}
             height={18}
             cr={0.7}
-            className="opacity-20 text-brand/30 [mask-image:radial-gradient(ellipse_at_bottom_left,white,transparent_65%)]"
+            className="atmosphere-dots text-brand/30 [mask-image:radial-gradient(ellipse_at_bottom_left,white,transparent_65%)]"
           />
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--brand-muted)_0%,transparent_50%)]" />
           <div className="relative max-w-2xl">
