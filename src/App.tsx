@@ -6,7 +6,6 @@ import { Footer } from "@/components/shared/footer";
 import { ScrollProgressBar } from "@/components/shared/scroll-progress";
 import { BackToTop } from "@/components/shared/back-to-top";
 import { LoadingScreen } from "@/components/shared/loading-screen";
-import { CommandPalette } from "@/components/shared/command-palette";
 import { SocialDock } from "@/components/shared/social-dock";
 import { HomePage } from "@/pages/Home";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
@@ -27,7 +26,6 @@ export default function App() {
         <Footer />
         <BackToTop />
         <SocialDock />
-        <CommandPalette />
         </TooltipProvider>
       </AppParticlesProvider>
     </ThemeProvider>

@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import {
   SectionAtmosphere,
@@ -14,6 +14,8 @@ interface SectionWrapperProps {
   compact?: boolean;
   atmosphere?: AtmosphereIntensity;
   atmosphereTint?: AtmosphereTint;
+  /** Full-width content that bleeds to section edges (no 100vw). */
+  bleed?: ReactNode;
 }
 
 export const SectionWrapper = memo(function SectionWrapper({
@@ -24,13 +26,14 @@ export const SectionWrapper = memo(function SectionWrapper({
   compact = false,
   atmosphere = "light",
   atmosphereTint = "brand",
+  bleed,
 }: SectionWrapperProps) {
   return (
     <section
       id={id}
       className={cn(
         compact ? "section-padding-compact" : "section-padding",
-        "relative overflow-hidden",
+        "relative overflow-x-clip",
         variant === "alt" && "bg-[var(--section-alt-bg)]",
         variant === "glow" && "section-glow",
         className
@@ -46,6 +49,10 @@ export const SectionWrapper = memo(function SectionWrapper({
       )}
 
       <div className="container-max relative z-[1]">{children}</div>
+
+      {bleed ? (
+        <div className="relative z-[1] -mx-6 mt-10 md:-mx-12 lg:-mx-16">{bleed}</div>
+      ) : null}
     </section>
   );
 });

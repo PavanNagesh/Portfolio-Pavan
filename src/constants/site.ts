@@ -27,19 +27,3 @@ export const navLinks = [
   { label: "Milestones", href: "#achievements" },
   { label: "Contact", href: "#contact" },
 ] as const;
-
-export const commandItems = [
-  { label: "Home", href: "#hero", group: "Navigation" },
-  { label: "About", href: "#about", group: "Navigation" },
-  { label: "Tech Stack", href: "#stack", group: "Navigation" },
-  { label: "Experience", href: "#experience", group: "Navigation" },
-  { label: "Projects", href: "#projects", group: "Navigation" },
-  { label: "Milestones", href: "#achievements", group: "Navigation" },
-  { label: "Skills", href: "#skills", group: "Navigation" },
-  { label: "Journey", href: "#journey", group: "Navigation" },
-  { label: "Contact", href: "#contact", group: "Navigation" },
-  { label: "Download Resume", href: "/Pavan_Nagesh_Resume.pdf", group: "Actions" },
-  { label: "GitHub", href: "https://github.com/PavanNagesh", group: "Social" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/pavan-nagesh-66b561297/", group: "Social" },
-  { label: "Email", href: "mailto:pavannagesh681@gmail.com", group: "Social" },
-] as const;

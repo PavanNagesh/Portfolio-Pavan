@@ -50,10 +50,10 @@ export function HeroSection() {
       ref={sectionRef}
       id="hero"
       onMouseMove={handleMouseMove}
-      className="relative min-h-screen overflow-visible section-padding pt-24 md:pt-28"
+      className="relative min-h-screen overflow-x-clip overflow-y-visible section-padding pt-24 md:pt-28"
     >
       <Spotlight
-        className="pointer-events-none absolute -top-24 left-0 z-0 md:-top-20 md:left-16"
+        className="pointer-events-none absolute -top-24 left-0 z-0 max-w-none overflow-hidden md:-top-20 md:left-16"
         fill="oklch(0.62 0.2 275)"
         fillOpacity={theme === "dark" ? 0.21 : 0.14}
       />
@@ -181,9 +181,9 @@ export function HeroSection() {
               </MagneticButton>
               <MagneticButton>
                 <ShimmerButton
-                  className="h-11 gap-2 rounded-full px-5 text-sm font-medium text-muted-foreground hover:text-foreground"
-                  background="transparent"
-                  shimmerColor="oklch(0.62 0.2 275 / 0.35)"
+                  className="h-11 gap-2 rounded-full px-5 text-sm font-medium text-foreground shadow-sm"
+                  background="var(--shimmer-secondary-bg)"
+                  shimmerColor="oklch(0.62 0.2 275 / 0.5)"
                   borderRadius="9999px"
                   onClick={() => scrollTo("#contact")}
                 >

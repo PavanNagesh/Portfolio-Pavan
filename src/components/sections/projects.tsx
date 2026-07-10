@@ -252,7 +252,7 @@ function ProjectsMarqueeShowcase({
   onOpenProject: (p: Project) => void;
 }) {
   return (
-    <div className="relative left-1/2 w-screen max-w-[100vw] -translate-x-1/2">
+    <div className="relative min-w-0">
       <div
         className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-[linear-gradient(90deg,var(--background)_25%,transparent)] sm:w-24"
         aria-hidden
@@ -291,18 +291,19 @@ export function ProjectsSection() {
       atmosphere="light"
       atmosphereTint="violet"
       className="!bg-transparent"
+      bleed={
+        <FadeIn>
+          <TooltipProvider delayDuration={200}>
+            <ProjectsMarqueeShowcase onOpenProject={openProject} />
+          </TooltipProvider>
+        </FadeIn>
+      }
     >
       <SectionHeading
         label="Projects"
         title="Projects I've Built"
         description="Things I've built, broken, and fixed. Web, AI, data, networking."
       />
-
-      <FadeIn>
-        <TooltipProvider delayDuration={200}>
-          <ProjectsMarqueeShowcase onOpenProject={openProject} />
-        </TooltipProvider>
-      </FadeIn>
 
       <ProjectDetailModal
         project={selected}

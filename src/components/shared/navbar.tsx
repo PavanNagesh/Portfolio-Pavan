@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Command, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { navLinks } from "@/constants/site";
 import { personalInfo } from "@/data/personal";
 import { useActiveSection } from "@/hooks/use-active-section";
@@ -13,6 +13,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const activeSection = useActiveSection();
+  const firstName = personalInfo.name.split(" ")[0];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -37,53 +38,42 @@ export function Navbar() {
         scrolled ? "glass-nav py-3" : "bg-transparent py-5"
       )}
     >
-      <nav className="container-max flex items-center justify-between px-6 md:px-12 lg:px-20">
+      <nav className="container-max flex items-center justify-between gap-8 px-6 md:gap-10 md:px-12 lg:px-16">
         <button
           onClick={() => handleNavClick("#hero")}
-          className="text-lg font-semibold tracking-tight transition-colors hover:text-brand"
+          className="shrink-0 text-xl font-bold tracking-tight transition-opacity hover:opacity-90"
           aria-label="Go to home"
         >
-          {personalInfo.name.split(" ")[0]}
+          <span className="nav-brand-logo">{firstName}</span>
           <span className="text-brand">.</span>
         </button>
 
-        <div className="hidden items-center gap-1 md:flex">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => handleNavClick(link.href)}
-              className={cn(
-                "link-underline relative px-3 py-2 text-sm transition-colors duration-300",
-                isActive(link.href)
-                  ? "font-medium text-brand"
-                  : "text-muted-foreground hover:text-foreground"
-              )}
-            >
-              {link.label}
-              {isActive(link.href) && (
-                <motion.span
-                  layoutId="nav-active"
-                  className="absolute -bottom-0.5 left-3 right-3 h-px bg-brand"
-                />
-              )}
-            </button>
-          ))}
+        <div className="hidden min-w-0 flex-1 items-center justify-center md:flex">
+          <div className="flex items-center gap-0.5 lg:gap-1">
+            {navLinks.map((link) => (
+              <button
+                key={link.href}
+                onClick={() => handleNavClick(link.href)}
+                className={cn(
+                  "link-underline relative rounded-full px-3.5 py-2 text-sm transition-colors duration-300 lg:px-4",
+                  isActive(link.href)
+                    ? "font-medium text-brand"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                {link.label}
+                {isActive(link.href) && (
+                  <motion.span
+                    layoutId="nav-active"
+                    className="absolute -bottom-0.5 left-3.5 right-3.5 h-px bg-brand lg:left-4 lg:right-4"
+                  />
+                )}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="hidden gap-2 rounded-full text-muted-foreground sm:flex"
-            onClick={() => {
-              document.dispatchEvent(
-                new KeyboardEvent("keydown", { key: "k", ctrlKey: true })
-              );
-            }}
-          >
-            <Command className="h-3.5 w-3.5" />
-            <span className="text-xs">Ctrl K</span>
-          </Button>
+        <div className="flex shrink-0 items-center gap-3 md:gap-3.5">
           <ThemeToggle />
           <Button
             variant="outline"

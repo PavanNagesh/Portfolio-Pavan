@@ -229,6 +229,7 @@
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    overflow-x: clip;
   }
 
   body {
@@ -281,6 +282,42 @@
 }
 
 @layer utilities {
+  @keyframes brand-logo-shine {
+    0%, 82%, 100% {
+      background-position: 200% center;
+    }
+    90% {
+      background-position: -100% center;
+    }
+  }
+
+  .nav-brand-logo {
+    color: transparent;
+    background-image: linear-gradient(
+      105deg,
+      var(--foreground) 0%,
+      var(--foreground) 38%,
+      oklch(0.62 0.2 275) 50%,
+      var(--foreground) 62%,
+      var(--foreground) 100%
+    );
+    background-size: 220% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: brand-logo-shine 7s ease-in-out infinite;
+  }
+
+  .dark .nav-brand-logo {
+    background-image: linear-gradient(
+      105deg,
+      var(--foreground) 0%,
+      var(--foreground) 38%,
+      oklch(0.72 0.18 275) 50%,
+      var(--foreground) 62%,
+      var(--foreground) 100%
+    );
+  }
+
   .text-gradient {
     @apply bg-gradient-to-r from-foreground via-foreground/85 to-muted-foreground bg-clip-text text-transparent;
   }
