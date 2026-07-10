@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#080c14"/>
+  <text x="100" y="80" fill="#38bdf8" font-size="13" font-weight="600" font-family="system-ui">Flutter Dashboard</text>
+  <rect x="350" y="100" width="500" height="500" rx="24" fill="#0c1220" stroke="#1a3050" stroke-width="3"/>
+  <rect x="380" y="140" width="440" height="200" rx="10" fill="#102030"/>
+  <path d="M400 300 L460 240 L520 260 L580 200 L640 230" stroke="#38bdf8" stroke-width="2" fill="none"/>
+  <rect x="380" y="360" width="200" height="100" rx="10" fill="#102030"/>
+  <rect x="600" y="360" width="220" height="100" rx="10" fill="#38bdf8" opacity="0.15"/>
+</svg>

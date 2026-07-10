@@ -1,0 +1,13 @@
+# dependencies
+/node_modules
+/dist
+/.next
+
+# logs
+*.log
+
+# env
+.env*
+
+# editor
+.DS_Store

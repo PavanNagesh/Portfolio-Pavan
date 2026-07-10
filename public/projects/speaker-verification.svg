@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#0a0a10"/>
+  <rect x="60" y="40" width="1080" height="595" rx="16" fill="#111118" stroke="#28283a"/>
+  <text x="100" y="90" fill="#a78bfa" font-family="system-ui" font-size="14" font-weight="700">SPEAKER VERIFICATION PIPELINE</text>
+  <rect x="100" y="120" width="140" height="70" rx="10" fill="#1a1a28" stroke="#4c3d8f"/><text x="120" y="162" fill="#a78bfa" font-family="monospace" font-size="11">Audio In</text>
+  <path d="M250 155 L310 155" stroke="#a78bfa" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="320" y="120" width="140" height="70" rx="10" fill="#1a1a28" stroke="#4c3d8f"/><text x="340" y="155" fill="#ccc" font-family="monospace" font-size="10">VAD +</text><text x="340" y="172" fill="#ccc" font-family="monospace" font-size="10">Segments</text>
+  <path d="M470 155 L530 155" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="540" y="120" width="140" height="70" rx="10" fill="#1a1a28" stroke="#7c5ce8"/><text x="560" y="155" fill="#a78bfa" font-family="monospace" font-size="10">CNN-GRU</text><text x="560" y="172" fill="#888" font-family="monospace" font-size="10">768-dim</text>
+  <path d="M690 155 L750 155" stroke="#a78bfa" stroke-width="2"/>
+  <rect x="760" y="120" width="140" height="70" rx="10" fill="#1a1a28" stroke="#4c3d8f"/><text x="780" y="162" fill="#ccc" font-family="monospace" font-size="10">Verify</text>
+  <rect x="100" y="280" width="1000" height="200" rx="12" fill="#0d0d14" stroke="#28283a"/>
+  <path d="M140 400 L200 340 L260 380 L320 300 L380 360 L440 320 L500 370 L560 310 L620 350 L680 330 L740 360 L800 300 L860 340 L920 320 L980 350" stroke="#7c5ce8" stroke-width="2" fill="none"/>
+  <text x="100" y="530" fill="#888" font-family="system-ui" font-size="12">EER: 5.96%  ·  Threshold: 0.8932  ·  16.2M comparisons</text>
+  <rect x="100" y="560" width="480" height="50" rx="8" fill="#1a1a28"/><text x="120" y="592" fill="#666" font-family="monospace" font-size="11">Whisper → Transcript → BART Summary</text>
+  <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#a78bfa"/></marker></defs>
+</svg>

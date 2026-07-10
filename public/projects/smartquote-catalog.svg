@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#0c0c14"/>
+  <text x="100" y="80" fill="#818cf8" font-size="13" font-weight="600" font-family="system-ui">Product Catalog</text>
+  <rect x="100" y="100" width="1000" height="480" rx="12" fill="#12121c" stroke="#2a2a40"/>
+  <rect x="130" y="130" width="940" height="36" rx="6" fill="#1a1a28"/>
+  <rect x="130" y="190" width="940" height="44" rx="4" fill="#16161f"/>
+  <rect x="130" y="250" width="940" height="44" rx="4" fill="#16161f"/>
+  <rect x="130" y="310" width="940" height="44" rx="4" fill="#818cf8" opacity="0.1"/>
+</svg>

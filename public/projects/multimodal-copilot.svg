@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#0d0a12"/>
+  <rect x="80" y="48" width="1040" height="580" rx="16" fill="#14101c" stroke="#302040"/>
+  <text x="120" y="100" fill="#c084fc" font-family="system-ui" font-size="14" font-weight="700">RAG COPILOT</text>
+  <rect x="120" y="130" width="280" height="460" rx="10" fill="#1a1428" stroke="#302040"/>
+  <text x="140" y="160" fill="#888" font-size="11">Documents</text>
+  <rect x="140" y="180" width="240" height="40" rx="6" fill="#2a2040"/>
+  <rect x="140" y="230" width="240" height="40" rx="6" fill="#2a2040"/>
+  <rect x="140" y="280" width="240" height="40" rx="6" fill="#c084fc" opacity="0.2"/>
+  <rect x="440" y="130" width="640" height="460" rx="10" fill="#100d18" stroke="#c084fc" stroke-width="1.5"/>
+  <rect x="460" y="400" width="600" height="60" rx="10" fill="#1a1428" stroke="#302040"/>
+  <text x="480" y="438" fill="#666" font-size="12">Ask about your documents...</text>
+  <rect x="460" y="160" width="500" height="100" rx="10" fill="#1a1428"/>
+  <text x="480" y="195" fill="#c084fc" font-size="12">Based on your uploaded PDF...</text>
+  <text x="480" y="220" fill="#888" font-size="11">The contract states payment terms of 30 days.</text>
+</svg>

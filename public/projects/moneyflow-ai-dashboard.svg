@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#0a0f0c"/>
+  <rect x="100" y="80" width="1000" height="520" rx="12" fill="#101814" stroke="#1e3028"/>
+  <text x="130" y="120" fill="#4ade80" font-family="system-ui" font-size="14" font-weight="600">Analytics Dashboard</text>
+  <path d="M150 480 L250 400 L350 420 L450 300 L550 350 L650 280 L750 320 L850 250 L950 290" stroke="#4ade80" stroke-width="3" fill="none"/>
+  <rect x="150" y="520" width="80" height="40" rx="6" fill="#1a2820"/><rect x="260" y="520" width="80" height="40" rx="6" fill="#1a2820"/><rect x="370" y="520" width="80" height="40" rx="6" fill="#4ade80" opacity="0.3"/>
+</svg>

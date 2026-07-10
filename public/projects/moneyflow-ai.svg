@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#0a0f0c"/>
+  <rect x="80" y="48" width="1040" height="580" rx="16" fill="#101814" stroke="#1e3028"/>
+  <rect x="80" y="48" width="1040" height="44" rx="16" fill="#142018"/>
+  <circle cx="108" cy="70" r="6" fill="#ff5f57"/><circle cx="130" cy="70" r="6" fill="#febc2e"/><circle cx="152" cy="70" r="6" fill="#28c840"/>
+  <text x="200" y="74" fill="#4ade80" font-family="system-ui" font-size="11">moneyflow.app/dashboard</text>
+  <rect x="100" y="108" width="200" height="500" rx="10" fill="#0d1410"/>
+  <text x="120" y="140" fill="#4ade80" font-size="13" font-weight="700" font-family="system-ui">MoneyFlow</text>
+  <rect x="120" y="160" width="160" height="36" rx="8" fill="#4ade80" opacity="0.15"/>
+  <rect x="120" y="210" width="160" height="8" rx="2" fill="#2a3d30"/>
+  <rect x="120" y="230" width="160" height="8" rx="2" fill="#2a3d30"/>
+  <rect x="340" y="108" width="760" height="240" rx="10" fill="#0d1410" stroke="#1e3028"/>
+  <text x="360" y="140" fill="#888" font-size="12" font-family="system-ui">Spending Overview</text>
+  <rect x="380" y="170" width="60" height="140" rx="4" fill="#4ade80" opacity="0.3"/>
+  <rect x="460" y="200" width="60" height="110" rx="4" fill="#4ade80" opacity="0.5"/>
+  <rect x="540" y="150" width="60" height="160" rx="4" fill="#4ade80" opacity="0.7"/>
+  <rect x="620" y="180" width="60" height="130" rx="4" fill="#4ade80" opacity="0.4"/>
+  <rect x="700" y="160" width="60" height="150" rx="4" fill="#4ade80"/>
+  <rect x="340" y="368" width="370" height="240" rx="10" fill="#0d1410" stroke="#1e3028"/>
+  <rect x="730" y="368" width="370" height="240" rx="10" fill="#0d1410" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="750" y="400" fill="#4ade80" font-size="11" font-family="system-ui">AI Insights</text>
+  <rect x="750" y="420" width="320" height="8" rx="2" fill="#2a3d30"/>
+  <rect x="750" y="440" width="280" height="8" rx="2" fill="#2a3d30"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" fill="none">
+  <rect width="1200" height="675" fill="#0d0a12"/>
+  <text x="100" y="80" fill="#c084fc" font-size="13" font-weight="600" font-family="system-ui">RAG Pipeline</text>
+  <rect x="100" y="110" width="150" height="55" rx="8" fill="#1a1428" stroke="#302040"/><text x="120" y="143" fill="#ccc" font-size="11" font-family="monospace">Upload</text>
+  <text x="270" y="143" fill="#c084fc" font-size="18">→</text>
+  <rect x="290" y="110" width="150" height="55" rx="8" fill="#1a1428" stroke="#302040"/><text x="310" y="143" fill="#ccc" font-size="11" font-family="monospace">OCR</text>
+  <text x="460" y="143" fill="#c084fc" font-size="18">→</text>
+  <rect x="480" y="110" width="150" height="55" rx="8" fill="#1a1428" stroke="#c084fc"/><text x="500" y="143" fill="#c084fc" font-size="11" font-family="monospace">Embed</text>
+  <text x="650" y="143" fill="#c084fc" font-size="18">→</text>
+  <rect x="670" y="110" width="150" height="55" rx="8" fill="#1a1428" stroke="#302040"/><text x="690" y="143" fill="#ccc" font-size="11" font-family="monospace">Retrieve</text>
+  <text x="840" y="143" fill="#c084fc" font-size="18">→</text>
+  <rect x="860" y="110" width="150" height="55" rx="8" fill="#1a1428" stroke="#302040"/><text x="880" y="143" fill="#ccc" font-size="11" font-family="monospace">LLM</text>
+</svg>
